@@ -1,21 +1,16 @@
 public class Principal {
-    public static void main(String[] args){
-            Paciente p1 = new Paciente("46498122", "Martin Diaz", "OSDE");
-            Paciente p2 = new Paciente("16488123", "Agustina Suarez", "IOMA");
+    public static void main(String[] args) {
+        Equipo equipo = new Equipo("Racing Club", "Primera");
+        Entrenador dt1 = new Entrenador("12345678", "Gustavo Costas", 25);
+        Entrenador dt2 = new Entrenador("87654321", "Juan Pablo Vojvoda", 5);
 
-            Medico dr = new Medico("MP111", "Derek Shepherd","Clinica",5);
+        equipo.asignarEntrenador(null);
 
-            dr.asignarPaciente(p1);
-            dr.asignarPaciente(p2);
+        equipo.asignarEntrenador(dt1);
+        equipo.mostrarInformacion();
 
-            dr.mostrarPacientes();
-            System.out.println("Total de pacientes: " + dr.cantidadPacientes());
-
-            System.out.println("Eliminar a Agustina..");
-            dr.eliminarPaciente("16488123");
-            dr.mostrarPacientes();
-
-            System.out.println("Comprobamos si sigue existiendo..");
-            System.out.println("Nombre: "+p2.getNombre()+" | Obra social: "+ p2.getObraSocial());
+        System.out.println("Cambio de DT");
+        equipo.cambiarEntrenador(dt2);
+        equipo.mostrarInformacion();
     }
 }
