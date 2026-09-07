@@ -1,7 +1,8 @@
-import clases.Personaje;
-import datos.ListaPersonajes;
+import funcionalidades.Funcionalidades;
 
-void main(String[] args) {
-    ListaPersonajes personajes=new ListaPersonajes();
-
+public class Main {
+    public static void main(String[] args) {
+        Funcionalidades f = new Funcionalidades();
+        f.prepararPartida();
+    }
 }
